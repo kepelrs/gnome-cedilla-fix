@@ -58,7 +58,8 @@ if [ -n "$GTK_IM_MODULE" ]; then
     exit 1
   fi
 else
-  sudo /bin/sh -c "echo GTK_IM_MODULE=\"$INPUT_METHOD\" >>$ENVFILE"
+  # Comment out based on https://organicdesign.nz/Brazilian_keyboard_settings
+  sudo /bin/sh -c "echo GTK_IM_MODULE=\"#$INPUT_METHOD\" >>$ENVFILE"
 fi
 
 # Save a copy of the system Compose file into .XCompose, replacing
